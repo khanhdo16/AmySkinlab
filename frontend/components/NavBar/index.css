@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navitem > a.active {
+        @apply bg-white text-primary;
+    }
+
+    .navmenu .react-horizontal-scrolling-menu--arrow-left,
+    .navmenu .react-horizontal-scrolling-menu--arrow-right {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .navmenu .navlist::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .navmenu .navlist {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_notification_templates",
+  "info": {
+    "displayName": "Notification Template"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true,
+      "minLength": 15
+    },
+    "show": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

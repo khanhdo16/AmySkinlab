@@ -1,0 +1,6 @@
+{
+    "watch": ["src"],
+    "ext": "js,json,ts",
+    "ignore": ["*.test.js", "node_modules/**/*"],
+    "exec": "strapi develop"
+}

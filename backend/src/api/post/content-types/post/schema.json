@@ -1,0 +1,61 @@
+{
+    "kind": "collectionType",
+    "collectionName": "posts",
+    "info": {
+        "singularName": "post",
+        "pluralName": "posts",
+        "displayName": "Post",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true,
+            "minLength": 10,
+            "unique": true
+        },
+        "description": {
+            "type": "text",
+            "maxLength": 256,
+            "required": true,
+            "minLength": 50
+        },
+        "slug": {
+            "type": "uid",
+            "targetField": "title",
+            "required": false,
+            "minLength": 10
+        },
+        "cover": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": ["images"]
+        },
+        "seo": {
+            "type": "component",
+            "repeatable": false,
+            "component": "shared.seo"
+        },
+        "body": {
+            "type": "customField",
+            "options": {
+                "output": "HTML",
+                "preset": "rich"
+            },
+            "customField": "plugin::ckeditor.CKEditor",
+            "required": true
+        },
+        "author": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::author.author",
+            "inversedBy": "posts",
+            "required": true
+        }
+    }
+}

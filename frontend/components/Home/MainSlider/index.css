@@ -1,0 +1,10 @@
+@tailwind components;
+
+@layer components {
+    .main-slider {
+        --swiper-pagination-color: theme(colors.accent);
+        --swiper-navigation-color: theme(colors.accent);
+        --swiper-navigation-size: theme(spacing.8);
+        --swiper-pagination-bullet-size: theme(spacing.3);
+    }
+}
